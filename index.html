@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.8">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link href="/xampp/htdocs/img/studio.jpg">
 	<title>Rádio Casa de Davi - Sobre Nós</title>
 	<style>
 	
@@ -29,37 +28,25 @@
 			font-size: 3em;
 			text-shadow: 2px 2px 4px #000000;
 		}
-		
-		.radio-player {
-			position: fixed;
-			bottom: 80px;
-			right: 20px;
-			background-color: rgba(0, 0, 0, 0.8);
+
+		audio {
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0,0,0,0,);
 			color: white;
 			padding: 10px;
-			border-radius: 10px;
-			font-size: 1.2em;
-			line-height: 1.5;
-			z-index: 9999;
+			box-sizing: border-box;
+			position: fixed;
+			bottom: 0;
+			left: 0;
 		}
 
 		@media (max-width: 768px) {
-		  .radio-player {
-			bottom: 20px;
-			right: 20px;
-			width: 100%;
-			border-radius: 0;
-		  }
-		  
-		  .radio-player iframe {
-			width: 100%;
-			height: 150px;
-		  }
+			audio {
+				height: 40px;
+				padding: 5px;
+			}
 		}
-
-
-
-
 
 		.btn-container {
 			display: flex;
@@ -122,14 +109,7 @@
 </head>
 	<body>
 		<h1>Rádio Casa de Davi</h1>
-
-		
-		<div class="radio-player">
-			  <iframe src="https://zeno.fm/player/radio-casa-de-davi-morro-da-fumaca" width="575" height="250" frameborder="0" scrolling="no"></iframe>
-			  <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a>
-		</div>
-
-		
+		<audio src="https://stream.zeno.fm/potntl9ctlbuv" controls autoplay></audio>
 		
 		<div class="btn-container">
 			<button class="btn"><a href="https://api.whatsapp.com/send?phone=5548998296674">Entre em contato pelo WhatsApp</a></button>
