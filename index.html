@@ -29,25 +29,37 @@
 			font-size: 3em;
 			text-shadow: 2px 2px 4px #000000;
 		}
-
-		audio {
-			width: 100%;
-			height: 50px;
-			background-color: rgba(0,0,0,0,);
+		
+		.radio-player {
+			position: fixed;
+			bottom: 80px;
+			right: 20px;
+			background-color: rgba(0, 0, 0, 0.8);
 			color: white;
 			padding: 10px;
-			box-sizing: border-box;
-			position: fixed;
-			bottom: 0;
-			left: 0;
+			border-radius: 10px;
+			font-size: 1.2em;
+			line-height: 1.5;
+			z-index: 9999;
 		}
 
 		@media (max-width: 768px) {
-			audio {
-				height: 40px;
-				padding: 5px;
-			}
+		  .radio-player {
+			bottom: 20px;
+			right: 20px;
+			width: 100%;
+			border-radius: 0;
+		  }
+		  
+		  .radio-player iframe {
+			width: 100%;
+			height: 150px;
+		  }
 		}
+
+
+
+
 
 		.btn-container {
 			display: flex;
@@ -110,7 +122,14 @@
 </head>
 	<body>
 		<h1>Rádio Casa de Davi</h1>
-		<audio src="https://stream.zeno.fm/potntl9ctlbuv" controls autoplay></audio>
+
+		
+		<div class="radio-player">
+			  <iframe src="https://zeno.fm/player/radio-casa-de-davi-morro-da-fumaca" width="575" height="250" frameborder="0" scrolling="no"></iframe>
+			  <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a>
+		</div>
+
+		
 		
 		<div class="btn-container">
 			<button class="btn"><a href="https://api.whatsapp.com/send?phone=5548998296674">Entre em contato pelo WhatsApp</a></button>
